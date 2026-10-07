@@ -376,9 +376,6 @@ body {
     font-weight: 600;
 }
 
-.employee-status{
-    opacity: 0.5;
-}
 
 .badge-table tbody tr:hover {
     background-color: #f8f9fc;
