@@ -140,16 +140,151 @@ export default App;*/}
 
 
 
-import { Routes, Route } from "react-router";
+// import { Routes, Route } from "react-router";
 
-import MainLayout from "./layouts/MainLayout";
+// import MainLayout from "./layouts/MainLayout";
 
+// import StaticPage from "./pages/assignments/Static";
+// import DynamicPage from "./pages/assignments/Dynamic";
+// //import CounterPage from "./pages/assignments/Counter";
+// import TodoList from "./pages/assignments/TodoList";
+
+// import RBBadges from "./pages/NonInteractiveComponents/RBBadges";
+// import RBBreadcrumbs from "./pages/NonInteractiveComponents/RBBreadcrumbs";
+// import RBButtons from "./pages/NonInteractiveComponents/RBButtons";
+// import RBButtonGroups from "./pages/NonInteractiveComponents/RBButtonGroups";
+// import RBCards from "./pages/NonInteractiveComponents/RBCards";
+// import RBImages from "./pages/NonInteractiveComponents/RBImages";
+// import RBListGroup from "./pages/NonInteractiveComponents/RBListGroup";
+// import RBFigure from "./pages/NonInteractiveComponents/RBFigure";
+// import RBPagination from "./pages/NonInteractiveComponents/RBPagination";
+// import RBProgressBars from "./pages/NonInteractiveComponents/RBProgressBars";
+// import RBSpinners from "./pages/NonInteractiveComponents/RBSpinners";
+// import RBTables from "./pages/NonInteractiveComponents/RBTables";
+
+// import RBAccordion from "./pages/InteractiveComponents/RBAccordions";
+
+
+// const App = () => {
+//   return (
+//     <Routes>
+
+//       <Route path="/" element={<MainLayout />}>
+
+//         <Route index element={<StaticPage />} />
+
+//         <Route
+//           path="static-profile"
+//           element={<StaticPage />}
+//         />
+
+//         <Route
+//           path="dynamic-profile"
+//           element={<DynamicPage />}
+//         />
+
+//          {/* <Route
+//           path="counter"
+          
+//           element={<CounterPage />}
+//         />  */}
+
+//         <Route
+//           path="todo"
+//           element={<TodoList />}
+//         />
+
+//         <Route
+//           path="badges"
+//           element={<RBBadges />}
+//         />
+
+//         <Route
+//           path="breadcrumbs"
+//           element={<RBBreadcrumbs />}
+//         />
+
+//         <Route
+//           path="buttons"
+//           element={<RBButtons />}
+//         />
+
+//         <Route
+//           path="button-groups"
+//           element={<RBButtonGroups />}
+//         />
+
+//         <Route
+//           path="cards"
+//           element={<RBCards />}
+//         />
+
+//         <Route
+//           path="images"
+//           element={<RBImages />}
+//         />
+
+//         <Route
+//           path="list-group"
+//           element={<RBListGroup />}
+//         />
+
+//         <Route
+//           path="figure"
+//           element={<RBFigure />}
+//         />
+
+//         <Route
+//           path="pagination"
+//           element={<RBPagination />}
+//         />
+
+//         <Route
+//           path="progress-bars"
+//           element={<RBProgressBars />}
+//         />
+
+//         <Route
+//           path="spinners"
+//           element={<RBSpinners />}
+//         />
+
+//         <Route
+//           path="tables"
+//           element={<RBTables />}
+//         />
+
+//         <Route
+//           path="accordion"
+//           element={<RBAccordion />}
+//         />
+
+
+//       </Route>
+
+//     </Routes>
+//   );
+// };
+
+// export default App;
+
+
+
+
+
+
+import { createBrowserRouter, RouterProvider } from "react-router";
+
+import MainLayout from "./layouts/Mainlayout";
+import Home from "./pages/Home";
 import StaticPage from "./pages/assignments/Static";
-import DynamicPage from "./pages/assignments/Dynamic";
 //import CounterPage from "./pages/assignments/Counter";
+import DynamicPage from "./pages/assignments/Dynamic";
 import TodoList from "./pages/assignments/TodoList";
 
-import RBBadges from "./pages/NonInteractiveComponents/RBBadges";
+
+
+//import RBBadges from "./pages/NonInteractiveComponents/RBBadges";
 import RBBreadcrumbs from "./pages/NonInteractiveComponents/RBBreadcrumbs";
 import RBButtons from "./pages/NonInteractiveComponents/RBButtons";
 import RBButtonGroups from "./pages/NonInteractiveComponents/RBButtonGroups";
@@ -162,99 +297,126 @@ import RBProgressBars from "./pages/NonInteractiveComponents/RBProgressBars";
 import RBSpinners from "./pages/NonInteractiveComponents/RBSpinners";
 import RBTables from "./pages/NonInteractiveComponents/RBTables";
 
-const App = () => {
-  return (
-    <Routes>
 
-      <Route path="/" element={<MainLayout />}>
+import RBAccordions from "./pages/InteractiveComponents/RBAccordions";
+import RBCarousels from "./pages/InteractiveComponents/RBCarousels";
+import RBDropdowns from "./pages/InteractiveComponents/RBDropdowns";
+import RBModal from "./pages/InteractiveComponents/RBModal";
+import RBNavbarOffcanvas from "./pages/InteractiveComponents/RBNavbarOffcanvas";
+import RBNavsTabs from "./pages/InteractiveComponents/RBNavsTabs";
+import RBOverlays from "./pages/InteractiveComponents/RBOverlays";
 
-        <Route index element={<StaticPage />} />
 
-        <Route
-          path="static-profile"
-          element={<StaticPage />}
-        />
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <MainLayout />,
+        children: [
+            {
+                index: true,
+                element: <Home />
+            },
+            {
+                path: "static",
+                element: <StaticPage />
+            },
+            {
+                path: "dynamic",
+                element: <DynamicPage />
+            },
+            // {
+            //     path: "counter",
+            //     element: <CounterPage />
+            // },
+            {
+                path: "todo",
+                element: <TodoList />
+            },
+            // {
+            //     path: "badges",
+            //     element: <Badges />
+            // },
+            {
+                path: "breadcrumbs",
+                element: <RBBreadcrumbs />
+            },
+            {
+                path: "buttons",
+                element: <RBButtons />
+            },
+            {
+                path: "button-group",
+                element: <RBButtonGroups />
+            },
+            {
+                path: "cards",
+                element: <RBCards />
+            },
+            {
+                path: "images",
+                element: <RBImages />
+            },
+            {
+                path: "list-group",
+                element: <RBListGroup />
+            },
+            {
+                path: "figures",
+                element: <RBFigure />
+            },
+            {
+                path: "pagination",
+                element: <RBPagination />
+            },
+            {
+                path: "progress-bars",
+                element: <RBProgressBars />
+            },
+            {
+                path: "spinners",
+                element: <RBSpinners />
+            },
+            {
+                path: "tables",
+                element: <RBTables />
+            },
+            {
+                path: "accordions",
+                element: <RBAccordions />
+            },
+            {
+                path: "carousels",
+                element: <RBCarousels />
+            },
+            {
+                path: "dropdown",
+                element: <RBDropdowns />
+            },
+            {
+                path: "modals",
+                element: <RBModal />
+            },
+            {
+                path: "navbar-offcanvas",
+                element: <RBNavbarOffcanvas />,
+            },
+            {
+                path: "navs-tabs",
+                element: <RBNavsTabs />,
+            },
+            {
+                path: "overlays",
+                element: <RBOverlays />,
+            }
+        ]
+    }
+]);
 
-        <Route
-          path="dynamic-profile"
-          element={<DynamicPage />}
-        />
 
-         {/* <Route
-          path="counter"npm run dev
-          
-          element={<CounterPage />}
-        />  */}
-
-        <Route
-          path="todo"
-          element={<TodoList />}
-        />
-
-        <Route
-          path="badges"
-          element={<RBBadges />}
-        />
-
-        <Route
-          path="breadcrumbs"
-          element={<RBBreadcrumbs />}
-        />
-
-        <Route
-          path="buttons"
-          element={<RBButtons />}
-        />
-
-        <Route
-          path="button-groups"
-          element={<RBButtonGroups />}
-        />
-
-        <Route
-          path="cards"
-          element={<RBCards />}
-        />
-
-        <Route
-          path="images"
-          element={<RBImages />}
-        />
-
-        <Route
-          path="list-group"
-          element={<RBListGroup />}
-        />
-
-        <Route
-          path="figure"
-          element={<RBFigure />}
-        />
-
-        <Route
-          path="pagination"
-          element={<RBPagination />}
-        />
-
-        <Route
-          path="progress-bars"
-          element={<RBProgressBars />}
-        />
-
-        <Route
-          path="spinners"
-          element={<RBSpinners />}
-        />
-
-        <Route
-          path="tables"
-          element={<RBTables />}
-        />
-
-      </Route>
-
-    </Routes>
-  );
-};
+function App() {
+    return (
+        <RouterProvider router={router} />
+    );
+}
 
 export default App;

@@ -1,6 +1,6 @@
 import React from "react";
-import { UseStateCounter } from "../../components/usestate_task/UseStateCounter";
-import UseReducerCounter from "../../components/usereducer_task/UseReducerCounter";
+import { UseStateCounter } from "../../components/UseStateCounter";
+import UseReducerCounter from "../../components/UseReducerCounter";
 const Counter = () => {
   return (
     <div>

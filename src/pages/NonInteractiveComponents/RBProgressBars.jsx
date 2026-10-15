@@ -3,7 +3,7 @@ import ProgressBar from "react-bootstrap/ProgressBar";
 import Badge from "react-bootstrap/Badge";
 import Button from "react-bootstrap/Button";
 
-function RBPrgressBars() {
+function RBProgressBars() {
   const [progress, setProgress] = useState(5);
 
   const increaseProgress = () => {
@@ -87,4 +87,4 @@ function RBPrgressBars() {
   );
 }
 
-export default RBPrgressBars;
+export default RBProgressBars;

@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -74,7 +74,7 @@ body {
 }
 
 
-/* ================= STATIC ================= */
+/* ================= STATIC ================= 
 
 .static-section {
     text-align: center;
@@ -134,7 +134,7 @@ body {
 }
 
 
-/* ================= DYNAMIC ================= */
+/* ================= DYNAMIC ================= 
 
 .dynamic-section {
     margin-top: 20px;
@@ -192,7 +192,7 @@ body {
 }
 
 
-/* Responsive */
+/* Responsive 
 
 @media (max-width: 1000px) {
     .dynamic-container {
@@ -206,7 +206,7 @@ body {
     }
 }
 
-/* TASK 2 - COUNTER */
+/* TASK 2 - COUNTER 
 
 .counter-container {
     width: 90%;
@@ -257,7 +257,7 @@ body {
     font-size: 15px;
 }
 
-/* ROUTING LAYOUT */
+/* ROUTING LAYOUT 
 
 .app-layout {
     display: flex;
@@ -266,7 +266,7 @@ body {
 }
 
 
-/* SIDEBAR */
+/* SIDEBAR 
 
 .sidebar {
     width: 230px;
@@ -294,7 +294,7 @@ body {
 }
 
 
-/* CONTENT AREA */
+/* CONTENT AREA 
 
 .content-area {
     flex: 1;
@@ -303,7 +303,7 @@ body {
 }
 
 
-/* HOME PAGE */
+/* HOME PAGE 
 
 .content-area .container {
     background-color: white;
@@ -336,7 +336,7 @@ body {
 
 /* =========================
    BADGES TABLE
-========================= */
+========================= 
 
 .badge-table-wrapper {
     margin-top: 20px;
@@ -874,7 +874,7 @@ body {
 ========================= */
 /* =========================
    STATUS BADGES
-========================= */
+========================= 
 
 .status-badge {
     display: inline-block;
@@ -954,3 +954,48 @@ body {
     background-color:#efe3b4c0 ;
     color: rgb(170, 170, 170);
 }
+*/
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #222;
+}
+
+.breadcrumb-custom .breadcrumb-item + .breadcrumb-item::before {
+    content: none;
+}
+
+.group-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+.avatar-overlap {
+    margin-left: -12px;
+}
+
+.nav-underline .nav-link {
+    color: #212529;
+}
+
+
+.nav-underline .nav-link.active {
+    color: #0d6efd;
+    border-bottom: 2px solid #0d6efd;
+}
+
